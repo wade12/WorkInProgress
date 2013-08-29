@@ -7,19 +7,19 @@
         android:title="@string/action_settings"/>
     
     <item android:id="@+id/twitter"
-        	android:title="@string/twitter"
+        	android:icon="@drawable/twitter_logo"
         	android:orderInCategory="1"
         	android:showAsAction="always">
     </item>
     
     <item android:id="@+id/facebook"
-        	android:title="@string/facebook"
+        	android:icon="@drawable/facebook_logo"
         	android:orderInCategory="2"
         	android:showAsAction="always">
     </item>
     
     <item android:id="@+id/refresh"
-        	android:title="@string/refresh"
+        	android:icon="@drawable/refresh_logo"
         	android:orderInCategory="3"
         	android:showAsAction="always">
     </item>
