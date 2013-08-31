@@ -1,6 +1,5 @@
 package com.wade12;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class NewActivity extends Activity {
+public class NewActivity extends BaseActivity {
 
 	private final String TAG = "NewActivity";
 
