@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_across"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout android:id="@+id/LinaerLayout1"
+    	android:layout_width="0dp"
+    	android:layout_height="match_parent"
+    	android:layout_weight="1"
+    	android:gravity="center"
+    	android:orientation="vertical" >
+
+    	<TextView
+        	android:id="@+id/textView1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/hello_android"
+        	tools:context=".MainActivity" />
+
+    	<Button
+        	android:id="@+id/button1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/button_string" />
+        	<!--  android:onClick="buttonClick" -->
+    	
+    </LinearLayout>
+    
+    <fragment android:name="com.wade12.SideFragment"
+    	android:layout_width="0dp"
+    	android:layout_height="match_parent"
+    	android:layout_weight="1" />
+
+</LinearLayout>
