@@ -9,6 +9,7 @@
     <string name="name">Name</string>
     <string name="comment">Comment</string>
     <string name="other">Other</string>
+    <string name="email">email</string>
     <string name="submit">Submit</string>
     <string name="blank"></string>
     <string name="twitter">Twitter</string>

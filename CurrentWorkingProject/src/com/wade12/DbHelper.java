@@ -14,12 +14,13 @@ public class DbHelper extends SQLiteOpenHelper {
 	public static final String COMMENT = "comment";
 	public static final String EMAIL = "email";
 	public static final String TIME = "time";
+	public static final int VERSION = 1;
 
 	public final String createDb = "create table if not exists " + TABLE_NAME + " ( " + C_ID + "integer primary key autoincrement, " + NAME
 			+ "text, " + COMMENT + "text, " + EMAIL + "text, " + TIME + "text); ";
 
 	public DbHelper(Context context, String name, CursorFactory factory, int version) {
-		super(context, DATABASE_NAME, factory, version);
+		super(context, DATABASE_NAME, null, VERSION);
 	} // end method DbHelper
 
 	@Override
