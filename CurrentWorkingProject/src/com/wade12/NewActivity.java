@@ -34,11 +34,16 @@ public class NewActivity extends BaseActivity {
 	public void swapFragment() {
 		FragmentManager fragManager = getSupportFragmentManager();
 		FragmentTransaction fragTransaction = fragman.beginTransaction();
-		
-		Fragment current = 
-		
-		
-		
+
+		Fragment current = fragManager.findViewByTag("SIDE");
+		if (!current.isVisible())
+			fragTransaction.replace(R.id.fragment_frame, picture, "PIC");
+		else
+			fragTransaction.replace(R.id.fragment_frame, side, "SIDE");
+
+		fragTransaction.addToBackStack(null);
+		fragTransaction.commit();
+
 	} // end method swapFragment
 	/*
 	 * public void submitComment(View view) {
