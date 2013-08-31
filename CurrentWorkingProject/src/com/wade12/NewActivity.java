@@ -12,15 +12,19 @@ public class NewActivity extends BaseActivity {
 
 	TextView nameOut;
 
+	Fragment picture = new PictureFragment();
+	Fragment side = new SideFragment();
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.frame_activity);
 
-		FragmentManager fragman = getSupportFragmentManager();
-		FragmentTransaction fragtrans = fragman.beginTransaction();
+		FragmentManager fragMan = getSupportFragmentManager();
+		FragmentTransaction fragTrans = fragMan.beginTransaction();
 		Fragment frag = new SideFragment();
-		fragtrans.replace(R.id.fragment_frame, frag);
+		fragTrans.replace(R.id.fragment_frame, frag, "SIDE");
+		fragTrans.commit();
 
 		/*
 		 * Intent intent = getIntent(); String text =
@@ -33,9 +37,9 @@ public class NewActivity extends BaseActivity {
 
 	public void swapFragment() {
 		FragmentManager fragManager = getSupportFragmentManager();
-		FragmentTransaction fragTransaction = fragman.beginTransaction();
+		FragmentTransaction fragTransaction = fragManager.beginTransaction();
 
-		Fragment current = fragManager.findViewByTag("SIDE");
+		Fragment current = fragManager.findFragmentByTag("SIDE");
 		if (!current.isVisible())
 			fragTransaction.replace(R.id.fragment_frame, picture, "PIC");
 		else
